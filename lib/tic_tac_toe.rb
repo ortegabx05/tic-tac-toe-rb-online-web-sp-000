@@ -48,7 +48,7 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board,index)
     display_board(board)
-    
+    move(board,index,current_player)
   else
     turn(board)
   end
