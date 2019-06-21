@@ -81,12 +81,6 @@ end
 return current_player
 end
 
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
-
-
-
 def won?(board)
 winner = nil
 empty_board = board.all? {|x| x == " "}
