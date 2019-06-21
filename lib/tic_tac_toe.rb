@@ -54,14 +54,6 @@ def turn(board)
   end
 end
 
-def play(board)
-  counter = 0
-  until counter == 9
-  counter += 1
-  turn(board)
-  end
-end
-
 def turn_count(board)
   counter = 0
   board.each do |team|
@@ -117,5 +109,13 @@ end
 def winner(board)
   if won?(board)
    board[won?(board)[0]]
+  end
+end
+
+def play(board)
+  counter = 0
+  until counter == 9
+  counter += 1
+  turn(board)
   end
 end
