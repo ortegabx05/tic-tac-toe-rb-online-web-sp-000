@@ -44,14 +44,13 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
+  input = gets.strip
+  index = input_to_index(input)
   token = current_player(board)
    if valid_move?(board,index)
     move(board, index, token)
     display_board(board)
    else
-    puts 'try again'
     turn(board)
   end
 end
