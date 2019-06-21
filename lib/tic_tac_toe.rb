@@ -112,10 +112,15 @@ def winner(board)
 end
 
 def play(board)
-  counter = 0
-  until counter == 9
-  counter += 1
-  turn(board)
-  
+  until over?(board) == true || won?(board) != false
+  puts 'turn'
+    turn(board)
+  end
+  if winner(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "Draw!"
+  else
+    return nil
   end
 end
